@@ -8,6 +8,10 @@ body, p, ol, ul, td {
   padding: 0;
 }
 
+img {
+  padding: 0px 10px 0px 10px;
+}
+
 pre {
   background-color: #eee;
   padding: 10px;
@@ -84,4 +88,13 @@ h1 {
 
 .right {
     float: right;
+}
+
+#submitted {
+  font-size:.8em;
+  color: #666;
+}
+
+#disqus_thread {
+  margin-top: 20px;
 }

@@ -8,7 +8,7 @@
 	<div id="content">
 		<%= link_to '← Back', profiles_path %>
 		<div class="right">
-			<%= link_to 'Edit Profile', edit_profile_path(@profile) %>
+			<%= link_to 'Edit Profile', edit_profile_path(@profile) %> | <%= link_to 'Delete', @profile, :confirm => 'Are you sure?', :method => :delete %>
 		</div>
 	</div>
 </div>
@@ -17,28 +17,21 @@
 	<div id="content">
 		<p id="notice"><%= notice %></p>
 
-		  <h2><%= @profile.distro %> <%= @profile.version %></h2>
+		  <h2><%= distro_image %><%= @profile.distro %> <%= @profile.version %></h2>
 
-		<p>
-		  <b>Architecture:</b>
-		  <%= @profile.architecture %>
-		</p>
+		<p>This profile is designed for <b><%= @profile.architecture %></b> machines</p>
 
-		<p>
-		  <b>Author:</b>
-		  <%= @profile.author %>
-		</p>
+		<p id="submitted">Submitted by <%= @profile.author %> on <%= @profile.created_at %></p>
+		<h3>Download Instructions</h3>
+		<ol>
+			<li>Create a new folder in the Keryx projects folder. You can name this whatever you want</li>
+			<li>Make a file in this directory with the same name and with the ".keryx" file extension". For example: <pre><%= @profile.distro %>_<%= @profile.version %>_<%= @profile.architecture %>.keryx</pre> Edit this file and paste in the following contents: <pre><%= @profile.distro %> <%= @profile.version %><br />Debian</pre></li>
+			<li>Make another file in your profile directory called "debian.conf" with the following contents:<pre>Computer Name: default<br />OS Name: <%= @profile.distro %><br />OS Version: <%= @profile.version %><br />Architecture: <%= @profile.architecture %><br />Kernel: default</pre></li>
+			<li>Download the <b><%= link_to 'status', @profile.status.url %></b> file and save it inside a directory called "lists" in your profile folder.</li>
 
-		<p>
-		  <b>Email:</b>
-		  <%= @profile.email %>
-		</p>
-
-		<p>
-			<%= link_to 'status', @profile.status.url %>
-			<%= link_to 'sources.list', @profile.sources.url %>
-		</p>
-		
+			<li>Download the <b><%= link_to 'sources.list', @profile.sources.url %></b> file and save it inside a directory called "sources" in your profile folder.</li>
+			<li>Open your new profile in Keryx!</li>
+		</ol>
 		<div id="disqus_thread"></div>
 		<script type="text/javascript">
 		  /**

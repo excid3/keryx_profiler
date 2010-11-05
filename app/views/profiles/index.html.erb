@@ -8,7 +8,7 @@
 	<div id="content">
 		<%= link_to 'Home', '/' %>
 	  <div class="right">
-			<%= link_to 'New Profile', new_profile_path %>
+			<%= link_to 'Add New Profile', new_profile_path %>
 		</div>
 	</div>
 </div>
@@ -22,22 +22,16 @@
 		    <th>Version</th>
 		    <th>Architecture</th>
 		    <th>Author</th>
-		    <th>Email</th>
-		    <th></th>
-		    <th></th>
 		    <th></th>
 		  </tr>
 
 		<% @profiles.each do |profile| %>
 		  <tr>
-		    <td><%= image_tag "/images/distros/#{profile.distro}.png" %><%= profile.distro %></td>
+		    <td><%= distro_image profile %><%= profile.distro %></td>
 		    <td><%= profile.version %></td>
 		    <td><%= profile.architecture %></td>
 		    <td><%= profile.author %></td>
-		    <td><%= profile.email %></td>
 		    <td><%= link_to 'Show', profile %></td>
-		    <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
-		    <td><%= link_to 'Destroy', profile, :confirm => 'Are you sure?', :method => :delete %></td>
 		  </tr>
 		<% end %>
 		</table>

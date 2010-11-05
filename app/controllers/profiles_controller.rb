@@ -2,7 +2,7 @@ class ProfilesController < ApplicationController
   # GET /profiles
   # GET /profiles.xml
   def index
-    @profiles = Profile.all(:limit => 10)
+    @profiles = Profile.all
 
     respond_to do |format|
       format.html # index.html.erb
