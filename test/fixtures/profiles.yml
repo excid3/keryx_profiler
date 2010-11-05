@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  distro: MyString
+  version: MyString
+  architecture: MyString
+  author: MyString
+  email: MyString
+
+two:
+  distro: MyString
+  version: MyString
+  architecture: MyString
+  author: MyString
+  email: MyString

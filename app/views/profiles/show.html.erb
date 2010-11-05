@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Distro:</b>
+  <%= @profile.distro %>
+</p>
+
+<p>
+  <b>Version:</b>
+  <%= @profile.version %>
+</p>
+
+<p>
+  <b>Architecture:</b>
+  <%= @profile.architecture %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%= @profile.author %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @profile.email %>
+</p>
+
+<p>
+	<%= link_to 'Status', @profile.status.url %>
+</p>
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>
