@@ -1,31 +1,44 @@
-<h1>Listing profiles</h1>
+<div id="header">
+	<div id="content">
+		<h1>Listing profiles</h1>
+	</div>
+</div>
 
-<table>
-  <tr>
-    <th>Distro</th>
-    <th>Version</th>
-    <th>Architecture</th>
-    <th>Author</th>
-    <th>Email</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div id="nav">
+	<div id="content">
+		<%= link_to 'Home', '/' %>
+	  <div class="right">
+			<%= link_to 'New Profile', new_profile_path %>
+		</div>
+	</div>
+</div>
 
-<% @profiles.each do |profile| %>
-  <tr>
-    <td><%= profile.distro %></td>
-    <td><%= profile.version %></td>
-    <td><%= profile.architecture %></td>
-    <td><%= profile.author %></td>
-    <td><%= profile.email %></td>
-    <td><%= link_to 'Show', profile %></td>
-    <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
-    <td><%= link_to 'Destroy', profile, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+<div id="main">	
+	<div id="content">
+		<table>
+		  <tr>
+		    <th>Distro</th>
+		    <th>Version</th>
+		    <th>Architecture</th>
+		    <th>Author</th>
+		    <th>Email</th>
+		    <th></th>
+		    <th></th>
+		    <th></th>
+		  </tr>
 
-<br />
-
-<%= link_to 'New Profile', new_profile_path %>
+		<% @profiles.each do |profile| %>
+		  <tr>
+		    <td><%= profile.distro %></td>
+		    <td><%= profile.version %></td>
+		    <td><%= profile.architecture %></td>
+		    <td><%= profile.author %></td>
+		    <td><%= profile.email %></td>
+		    <td><%= link_to 'Show', profile %></td>
+		    <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
+		    <td><%= link_to 'Destroy', profile, :confirm => 'Are you sure?', :method => :delete %></td>
+		  </tr>
+		<% end %>
+		</table>
+	</div>
+</div>

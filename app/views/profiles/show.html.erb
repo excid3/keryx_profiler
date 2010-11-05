@@ -26,7 +26,8 @@
 </p>
 
 <p>
-	<%= link_to 'Status', @profile.status.url %>
+	<%= link_to 'status', @profile.status.url %>
+	<%= link_to 'sources.list', @profile.sources.url %>
 </p>
 
 <%= link_to 'Edit', edit_profile_path(@profile) %> |

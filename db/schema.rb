@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101105020904) do
+ActiveRecord::Schema.define(:version => 20101105022430) do
 
   create_table "profiles", :force => true do |t|
     t.string   "distro"
@@ -24,6 +24,10 @@ ActiveRecord::Schema.define(:version => 20101105020904) do
     t.string   "status_content_type"
     t.integer  "status_file_size"
     t.datetime "status_updated_at"
+    t.string   "sources_file_name"
+    t.string   "sources_content_type"
+    t.integer  "sources_file_size"
+    t.datetime "sources_updated_at"
   end
 
 end

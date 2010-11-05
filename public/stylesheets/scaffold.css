@@ -4,6 +4,8 @@ body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size:   13px;
   line-height: 18px;
+  margin: 0;
+  padding: 0;
 }
 
 pre {
@@ -50,7 +52,36 @@ div.field, div.actions {
   color: #fff;
 }
 
+h1 {
+    margin: 0;
+    padding: 15px;
+}
+
 #error_explanation ul li {
   font-size: 12px;
   list-style: square;
+}
+
+#content {
+    clear: both;
+    margin: 0 auto;
+    width: 927px;
+}
+
+#header {
+    background-color: #C9DE55;
+    padding: 5px;
+}
+
+#nav {
+    background-color: #FFFF9D;
+    padding: 5px;
+}
+
+#main {
+    padding: 5px;
+}
+
+.right {
+    float: right;
 }
