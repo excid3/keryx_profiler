@@ -1,34 +1,50 @@
-<p id="notice"><%= notice %></p>
+<div id="header">
+	<div id="content">
+		<h1>View Profile</h1>
+	</div>
+</div>
 
-<p>
-  <b>Distro:</b>
-  <%= @profile.distro %>
-</p>
+<div id="nav">
+	<div id="content">
+		<%= link_to '← Back', profiles_path %>
+		<div class="right">
+			<%= link_to 'Edit Profile', edit_profile_path(@profile) %>
+		</div>
+	</div>
+</div>
 
-<p>
-  <b>Version:</b>
-  <%= @profile.version %>
-</p>
+<div id="main">
+	<div id="content">
+		<p id="notice"><%= notice %></p>
 
-<p>
-  <b>Architecture:</b>
-  <%= @profile.architecture %>
-</p>
+		<p>
+		  <b>Distro:</b>
+		  <%= @profile.distro %>
+		</p>
 
-<p>
-  <b>Author:</b>
-  <%= @profile.author %>
-</p>
+		<p>
+		  <b>Version:</b>
+		  <%= @profile.version %>
+		</p>
 
-<p>
-  <b>Email:</b>
-  <%= @profile.email %>
-</p>
+		<p>
+		  <b>Architecture:</b>
+		  <%= @profile.architecture %>
+		</p>
 
-<p>
-	<%= link_to 'status', @profile.status.url %>
-	<%= link_to 'sources.list', @profile.sources.url %>
-</p>
+		<p>
+		  <b>Author:</b>
+		  <%= @profile.author %>
+		</p>
 
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+		<p>
+		  <b>Email:</b>
+		  <%= @profile.email %>
+		</p>
+
+		<p>
+			<%= link_to 'status', @profile.status.url %>
+			<%= link_to 'sources.list', @profile.sources.url %>
+		</p>
+	</div>
+</div>

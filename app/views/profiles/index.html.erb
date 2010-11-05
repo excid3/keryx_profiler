@@ -29,7 +29,7 @@
 
 		<% @profiles.each do |profile| %>
 		  <tr>
-		    <td><%= profile.distro %></td>
+		    <td><%= image_tag "/images/distros/#{profile.distro}.png" %><%= profile.distro %></td>
 		    <td><%= profile.version %></td>
 		    <td><%= profile.architecture %></td>
 		    <td><%= profile.author %></td>

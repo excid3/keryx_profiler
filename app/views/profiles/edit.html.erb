@@ -1,6 +1,20 @@
-<h1>Editing profile</h1>
+<div id="header">
+	<div id="content">
+		<h1>Editing profile</h1>
+	</div>
+</div>
 
-<%= render 'form' %>
+<div id="nav">
+	<div id="content">
+		<%= link_to '← Back', profiles_path %>
+	  <div class="right">
+			<%= link_to 'Show Profile', @profile %>
+		</div>
+	</div>
+</div>
 
-<%= link_to 'Show', @profile %> |
-<%= link_to 'Back', profiles_path %>
+<div id="main">
+  <div id="content">
+		<%= render 'form' %>
+	</div>
+</div>
