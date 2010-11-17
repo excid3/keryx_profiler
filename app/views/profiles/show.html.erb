@@ -17,11 +17,11 @@
 	<div id="content">
 		<p id="notice"><%= notice %></p>
 
-		  <h2><%= distro_image %><%= @profile.distro %> <%= @profile.version %></h2>
+		<p class="left"><%= distro_image @profile %></p>
+		<h2><%= @profile.distro %> <%= @profile.version %></h2>
+		<p>For <strong style="color: #DD4814"><%= @profile.architecture %></strong> machines</p>
+		<p id="submitted">Submitted by <%= @profile.author %> on <%= @profile.updated_at %></p>
 
-		<p>This profile is designed for <b><%= @profile.architecture %></b> machines</p>
-
-		<p id="submitted">Submitted by <%= @profile.author %> on <%= @profile.created_at %></p>
 		<h3>Download Instructions</h3>
 		<ol>
 			<li>Create a new folder in the Keryx projects folder. You can name this whatever you want</li>

@@ -16,24 +16,16 @@
 <div id="main">	
 	<div id="content">
 		<h2>Latest Profiles</h2>
-		<table>
-		  <tr>
-		    <th>Distro</th>
-		    <th>Version</th>
-		    <th>Architecture</th>
-		    <th>Author</th>
-		    <th></th>
-		  </tr>
+		<ul style="list-style:none">
 
 		<% @profiles.each do |profile| %>
-		  <tr>
-		    <td><%= distro_image profile %><%= profile.distro %></td>
-		    <td><%= profile.version %></td>
-		    <td><%= profile.architecture %></td>
-		    <td><%= profile.author %></td>
-		    <td><%= link_to 'Show', profile %></td>
-		  </tr>
+			<li style="border-bottom: 1px solid #DDD; padding: 10px">
+				<p class="left"><%= distro_image profile %></p>
+				<h2><%= profile.distro %> <%= profile.version %></h2>
+				<p>For <strong style="color: #DD4814"><%= profile.architecture %></strong> machines</p>
+				<p id="submitted">Submitted by <%= profile.author %> on <%= profile.updated_at %></p>
+			</li>
 		<% end %>
-		</table>
+		</ul>
 	</div>
 </div>

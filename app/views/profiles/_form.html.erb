@@ -4,7 +4,7 @@
       <h2><%= pluralize(@profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
 
       <ul>
-      <% @profile.errors.full_messages.each do |msg| %>
+      <%= @profile.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>

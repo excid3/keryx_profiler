@@ -1,5 +1,6 @@
 source 'http://rubygems.org'
 
+gem 'aws-s3'
 gem 'paperclip'
 gem 'rails', '3.0.1'
 
