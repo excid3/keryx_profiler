@@ -12,7 +12,8 @@ class Profile < ActiveRecord::Base
                     #:bucket => "keryx_profiles"
 
   validates_presence_of :distro, :version, :architecture, :author, :email
-  validates_attachment_presence :status, :sources
+  validates_attachment_presence :status
+  validates_attachment_presence :sources
   validates_attachment_size :status, :less_than => 15.megabytes
   validates_attachment_size :sources, :less_than => 15.megabytes
 end
