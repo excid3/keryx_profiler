@@ -8,12 +8,12 @@
 </div>
 
 <div id="main">
-	<div id="content">
+	<div id="inner">
 		<p id="notice"><%= notice %></p>
 
 		<p class="left"><%= distro_image @profile %></p>
 		<h2><%= @profile.distro %> <%= @profile.version %></h2>
-		<p>For <strong style="color: #DD4814"><%= @profile.architecture %></strong> machines</p>
+		<p>For <span><%= @profile.architecture %></span> machines</p>
 		<p id="submitted">Submitted by <%= @profile.author %> on <%= @profile.updated_at %></p>
 
 		<h3>Download Instructions</h3>

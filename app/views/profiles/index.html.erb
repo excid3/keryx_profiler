@@ -8,15 +8,16 @@
 </div>
 
 <div id="main">	
-	<div id="content">
+	<div id="inner">
 		<h2>Latest Profiles</h2>
 		<ul style="list-style:none">
 
 		<% @profiles.each do |profile| %>
-			<li style="border-bottom: 1px solid #DDD; padding: 10px">
+			<li>
 				<p class="left"><%= distro_image profile %></p>
+				<p class="right"><%= link_to "View", profile %></p>
 				<h2><%= profile.distro %> <%= profile.version %></h2>
-				<p>For <strong style="color: #DD4814"><%= profile.architecture %></strong> machines</p>
+				<p>For <span><%= profile.architecture %></span> machines</p>
 				<p id="submitted">Submitted by <%= profile.author %> on <%= profile.updated_at %></p>
 			</li>
 		<% end %>

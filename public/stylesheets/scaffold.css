@@ -108,3 +108,18 @@ h1, h2 {
 .left {
     float: left;
 }
+#inner {
+    width: 675px;
+    margin: 0 auto;
+}
+#inner ul {
+    list-style: none;
+}
+#inner ul li {
+    border-bottom: 1px solid #DDD; 
+    padding: 10px;
+}
+#inner p strong {
+    color: #DD4814;
+    font-weight: bold;
+}
