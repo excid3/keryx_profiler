@@ -11,5 +11,8 @@ class Profile < ActiveRecord::Base
                     :path => "public/:attachment/:distro/:version/:architecture/:date_sources.list"
                     #:bucket => "keryx_profiles"
 
-  validates_presence_of :distro, :version, :architecture, :author, :email, :status, :sources
+  validates_presence_of :distro, :version, :architecture, :author, :email
+  validates_attachment_presence :status, :sources
+  validates_attachment_size :status, :less_than => 15.megabytes
+  validates_attachment_size :sources, :less_than => 15.megabytes
 end

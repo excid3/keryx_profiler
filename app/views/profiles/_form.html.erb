@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :architecture %><br />
-    <%= select_tag :architecture, options_for_select(["32bit", "64bit"]) %>
+    <%= f.select :architecture, options_for_select(["32bit", "64bit"]) %>
   </div>
   <div class="field">
     <%= f.label :author %><br />
