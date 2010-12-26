@@ -7,6 +7,7 @@ class ProfilesController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @profiles }
+      format.js { render :json => @profiles }
     end
   end
 
@@ -18,6 +19,7 @@ class ProfilesController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @profile }
+      format.js { render :json => @profile }
     end
   end
 
